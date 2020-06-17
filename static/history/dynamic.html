@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动态页面</title>
+</head>
+<body>
+    <h1>动态页面</h1>
+    <p>
+     同一个页面/路由，变化局部数据
+    </p>
+
+    <h2>关键词：<span id="key">web</span></h2>
+
+    <script>
+        const searchValue = window.location.search
+        const keyDom = document.getElementById('key')
+        if(searchValue){
+            const keywordValue = searchValue.substr(1).split('=')[1]
+            if(keywordValue){
+                keyDom.innerHTML=keywordValue
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+h1 {
+    text-align: center;
+    color: teal;
+    margin: 40px 0;
+}
+
+h2 {
+    text-align: center;
+    color: palevioletred;
+}
+
+h2 span {
+    margin-left: 20px;
+}
+
+.flex-inline {
+    display: flex;
+}
+
+.flex-inline div {
+    width: 30%;
+    height: 60px;
+    margin: 0 2%;
+    background-color: teal;
+    color: white;
+    text-align: center;
+    line-height: 60px;
+}
+
+
+
+.flex-inline div:nth-child(1){
+    border-radius: 100% 0 0 100%;
+}
+
+.flex-inline div:nth-child(3){
+    border-radius: 0 100% 100% 0;
+}
+
+.sunFlower {
+    width: 320px;
+    height: 520px;
+    z-index: 100;
+    transform-origin: bottom;
+    animation: swing 3.2s ease-out infinite alternate;
+    display: block;
+}
+
+.sunFlower .stem {
+    width: 100px;
+    height: 400px;
+    position: relative;
+    z-index: 1;
+    border-radius: 100%;
+    border: 10px solid green;
+    border-color: green green transparent transparent;
+    margin: -60px 0 0 30px;
+}
+
+.sunFlower .stem .leaf {
+    width: 60px;
+    height: 260px;
+    border-radius: 0 100% 0 100%;
+    background-color: green;
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    transform: rotate(-10deg);
+    transform-origin: right;
+}
+
+.sunFlower .stem .leaf:nth-child(2) {
+    transform: rotate(20deg) scale(-1, 1);
+    width: 80px;
+    height: 320px;
+    left: 50px;
+}
+
+.flower {
+    width: 220px;
+    height: 220px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+.flower .circleOut {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: tomato;
+}
+
+.flower .circleOut .circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    background-color: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flower .circleOut .circle span {
+    font-size: 24px;
+    font-weight: normal;
+    color: tomato;
+}
+
+
+.circleHalf {
+    width: 75px;
+    height: 40px;
+    overflow: hidden;
+    position: absolute;
+    top: 5px;
+    left: 72.5px;
+}
+
+.circleHalf:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    border-radius: 100% 100% 0 0;
+    background-color: tomato;
+}
+
+.circleHalf:nth-child(1) {
+    left: 160px;
+    top: 12px;
+    transform: rotate(56deg);
+    transform-origin: left;
+}
+
+.circleHalf:nth-child(2) {
+    left: 196px;
+    top: 80px;
+    transform: rotate(105deg);
+    transform-origin: left;
+}
+
+.circleHalf:nth-child(3) {
+    left: 165px;
+    top: 158px;
+    transform: rotate(165deg);
+    transform-origin: left;
+}
+
+.circleHalf:nth-child(4) {
+    left: 90px;
+    top: 175px;
+    transform: rotate(215deg);
+    transform-origin: left;
+}
+
+.circleHalf:nth-child(5) {
+    left: 25px;
+    top: 125px;
+    transform: rotate(275deg);
+    transform-origin: left;
+}
+
+.circleHalf:nth-child(6) {
+    left: 25px;
+    top: 46px;
+    transform: rotate(325deg);
+    transform-origin: left;
+}
+
+@keyframes swing {
+    from {
+        transform: rotate(5deg);
+    }
+
+    to {
+        transform: rotate(-3deg);
+    }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "web-development-case",
+  "version": "1.0.0",
+  "description": "",
+  "main": "appReq.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "http-proxy-middleware": "^0.17.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
