@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子模型</title>
+    <style>
+        body{
+            padding: 0;
+            margin:0;
+        }
+        .line {
+            display: flex;
+            background-color: yellow;
+        }
+        .box{
+            width:100px;
+            height: 100px;
+            background-color: blueviolet;
+        }
+        .box2 {
+            padding:10px;
+        }
+        .box3 {
+            padding:10px;
+            border:10px solid black;
+        }
+        .box4 {
+            padding:10px;
+            border:10px solid black;
+            margin:10px;
+        }
+        .box-border{
+            box-sizing: border-box;
+        }
+        .box-content{
+            box-sizing: content-box;
+        }
+        .row{
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <h1>常规</h1>
+    <section class="line">
+        <div class="box box1">宽高</div>
+        <div class="box box2">宽高、padding</div>
+        <div class="box box3">宽高、padding、border</div>
+        <div class="box box4">宽高、padding、border、margin</div>
+        <div class="box box4">宽高、padding、border、margin</div>
+    </section>
+    <h1>常规——box-sizing</h1>
+    <section class="line">
+        <div class="box box-border box1">宽高</div>
+        <div class="box box-border box2">宽高、padding</div>
+        <div class="box box-border box3">宽高、padding、border</div>
+        <div class="box box-border box4">宽高、padding、border、margin</div>
+        <div class="box box-border box4">宽高、padding、border、margin</div>
+    </section>
+    <h1>常规——box-sizing--content</h1>
+    <section class="line">
+        <div class="box box-content box1">宽高</div>
+        <div class="box box-content box2">宽高、padding</div>
+        <div class="box box-content box3">宽高、padding、border</div>
+        <div class="box box-content box4">宽高、padding、border、margin</div>
+        <div class="box box-content box4">宽高、padding、border、margin</div>
+    </section>
+    <section class="line row">
+        <div class="box box1">宽高</div>
+        <div class="box box2">宽高、padding</div>
+        <div class="box box3">宽高、padding、border</div>
+        <div class="box box4">宽高、padding、border、margin</div>
+        <div class="box box4">宽高、padding、border、margin</div>
+    </section>
+    
+</body>
+</html>
